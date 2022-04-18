@@ -18,3 +18,4 @@ public class FashionPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 }
+
