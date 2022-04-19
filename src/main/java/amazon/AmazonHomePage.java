@@ -10,5 +10,6 @@ public class AmazonHomePage extends BasePage {
     private static final String URL = "https://www.amazon.com/";
 
        // @FindBy(xpath =
+    //
 
 }
