@@ -13,6 +13,24 @@ public class FashionPage extends BasePage {
     @FindBy(xpath = "//img[@src='https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/BROWSE/L0/desktop/L0_DT_HERO_01W-v2.jpg']")
     public WebElement mainFashionImage;
 
+    @FindBy(xpath = "(//span[@class='nav-a-content'])[2]")
+    public WebElement womenTab;
+
+    @FindBy(xpath = "//a[@href='/Dresses/b/ref=sv_sl_fl_1045024?ie=UTF8&node=1045024']")
+    public WebElement dressesButton;
+
+    @FindBy(xpath = "//div[@class='fst-h1-st pageBanner']/h1/span")
+    public WebElement dressesTitle;
+
+    @FindBy(xpath = "(//span[@class='a-truncate-cut'])[3]")
+    public WebElement addToCartItem;
+
+    @FindBy(id = "nav-cart-count")
+    public WebElement cartCount;
+
+    @FindBy(id = "add-to-cart-button")
+    public WebElement addToCartButton;
+
     public FashionPage(){
         webDriverWait.until(ExpectedConditions.urlContains(URL));
         PageFactory.initElements(driver, this);
