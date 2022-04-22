@@ -19,9 +19,9 @@ public class TestBooksPage extends TestBasePage {
         BookPage.mainBookImage.click();
     }
         @Test
-        public void TestBookSearch() {
+        public void TestSearchBook() {
             WebElement SearchElement = driver.findElement(By.id("nav-search-submit-button"));
-            SearchElement.sendKeys("bast seller");
+            SearchElement.sendKeys("best sellers");
             driver.findElement(By.className("nav-input")).click();
            // WebElement SearchResults = driver.findElement(By.linkText("bast seller books"));
 
