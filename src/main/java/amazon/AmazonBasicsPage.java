@@ -11,14 +11,14 @@ public class AmazonBasicsPage extends BasePage {
 
     @FindBy(xpath ="(//a[@class='style__overlay__2qYgu EditorialTile__overlay__3cghg'])[1]" )
     public WebElement newArrivals;
-    //@FindBy(xpath = "//*[@id=\'3uu6f2odnn\']/div/div/div/a")
-    //public WebElement lightningCables;
-    //@FindBy(xpath = "//*[@id=\'reaapr152d\']/div/div/div/a")
-   // public WebElement workFromHome;
-    //@FindBy(xpath="//*[@id="krx4r15dsa"]/div/div/div/a")
-   // public WebElement automotiveSupplies;
-    //@FindBy(xpath="//*[@id=\"td2ouz0m0o\"]/div/div/div/a")
-    //public WebElement fitness;
+    @FindBy(xpath ="(//href[@class='style__overlay___2qYgu']) EditorialTitle__overlay__3cghg")
+    public WebElement lightningCables;
+    @FindBy(xpath="(//href[@class='style__overlay___2qYgu EditorialTile__overlay___3cghg")
+   public WebElement workFromHome;
+    @FindBy(xpath="(//span[@class='style__overlay___2gYgu EditorialTile__overlay__3cghg")
+    public WebElement automotiveSupplies;
+    @FindBy(xpath="(//span[@class='style__overlay__2qYgu EditorialTile__overlay__3cghg")
+    public WebElement fitness;
 
     public AmazonBasicsPage() {
         webDriverWait.until(ExpectedConditions.urlContains(URL));
