@@ -59,5 +59,4 @@ public class Homepage extends BasePage {
         return new TodaysDealsPage();
     }
 
-
 }

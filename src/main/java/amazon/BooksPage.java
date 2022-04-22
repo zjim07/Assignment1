@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.annotations.Test;
 
 public class BooksPage extends BasePage {
 
@@ -19,5 +18,12 @@ public class BooksPage extends BasePage {
         PageFactory.initElements(driver, this);
         
     }
+    @FindBy(xpath = "nav-search-submit-button")
+    public WebElement SearchElement;
 
-}
+ // public SearchElement(){
+   //   webDriverWait.until(ExpectedConditions.urlContains(URL));
+     // PageFactory.initElements(driver, this);
+
+  }
+
