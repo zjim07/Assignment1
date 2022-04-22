@@ -39,10 +39,10 @@ public class Homepage extends BasePage {
         return new AmazonBasicsPage();
     }
 
-    public AmazonHomePage navigateToAmazonHomePage(){
-        clickOnElement(amazonHomePage);
-        return new AmazonHomePage();
-    }
+    //public AmazonHomePage navigateToAmazonHomePage(){
+        //clickOnElement(amazonHomePage);
+       // return new AmazonHomePage();
+    //}
 
     public BooksPage navigateToBooksPage(){
         clickOnElement(booksPage);
