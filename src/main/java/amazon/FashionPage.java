@@ -14,7 +14,7 @@ public class FashionPage extends BasePage {
     public WebElement mainFashionImage;
 
     public FashionPage(){
-        webDriverWait.until(ExpectedConditions.urlContains(URL));
-        PageFactory.initElements(driver, this);
+            webDriverWait.until(ExpectedConditions.urlContains(URL));
+            PageFactory.initElements(driver, this);
     }
 }
