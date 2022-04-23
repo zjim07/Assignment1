@@ -22,7 +22,7 @@ public class FashionPage extends BasePage {
     @FindBy(xpath = "//div[@class='fst-h1-st pageBanner']/h1/span")
     public WebElement dressesTitle;
 
-    @FindBy(xpath = "(//span[@class='a-truncate-cut'])[3]")
+    @FindBy(xpath = "(//span[@class='a-truncate-cut'])[5]")
     public WebElement addToCartItem;
 
     @FindBy(id = "nav-cart-count")
@@ -30,6 +30,18 @@ public class FashionPage extends BasePage {
 
     @FindBy(id = "add-to-cart-button")
     public WebElement addToCartButton;
+
+    @FindBy(id = "quantity")
+    public WebElement quantityDropdown;
+
+    @FindBy(xpath = "//input[@value='Delete']")
+    public WebElement deleteButton;
+
+    @FindBy(xpath = "(//input[@class='a-button-input'])[10]")
+    public WebElement changeColor;
+
+    @FindBy(id = "inline-twister-expanded-dimension-text-color_name")
+    public WebElement colorText;
 
     public FashionPage(){
         webDriverWait.until(ExpectedConditions.urlContains(URL));

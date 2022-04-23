@@ -25,6 +25,9 @@ public class Homepage extends BasePage {
     @FindBy(xpath = "//a[@href='/deals?ref_=nav_cs_gb']")
     public WebElement todaysDealsPage;
 
+    @FindBy(xpath = "(//span[@class='a-truncate-cut'])[1]")
+    public WebElement item1;
+
     public Homepage() {
         PageFactory.initElements(driver, this);
     }

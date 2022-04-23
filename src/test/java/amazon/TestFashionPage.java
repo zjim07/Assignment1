@@ -40,8 +40,36 @@ public class TestFashionPage extends TestBasePage {
     }
 
     @Test
-    public void changeQuantityOfItem(){
+    public void changeQuantityOfItem() {
+        Homepage homepage = new Homepage();
+        FashionPage fashionPage = homepage.navigateToFashionPage();
+        fashionPage.addToCartItem.click();
+        fashionPage.selectFromDropdownByValue(fashionPage.quantityDropdown, "3");
+        Assert.assertEquals(fashionPage.quantityDropdown, 3);
+    }
 
+    @Test
+    public void removeItemFromCart() {
+        Homepage homepage = new Homepage();
+        FashionPage fashionPage = homepage.navigateToFashionPage();
+        fashionPage.addToCartItem.click();
+        fashionPage.addToCartButton.click();
+        fashionPage.cartCount.click();
+        fashionPage.deleteButton.click();
+        String actualResult = fashionPage.cartCount.getText();
+        String expectedResult = "0";
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void changeColorOfItem() {   //Sometimes this works, other times it adds 3 items to the cart. I have no idea why.
+        Homepage homepage = new Homepage();
+        FashionPage fashionPage = homepage.navigateToFashionPage();
+        fashionPage.addToCartItem.click();
+        fashionPage.changeColor.click();
+        String actualResult = fashionPage.colorText.getText();
+        String expectedResult = "Khaki Pink With Pendant";
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
 }
